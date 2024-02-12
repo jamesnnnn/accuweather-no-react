@@ -1,0 +1,219 @@
+h1 { font-size: 144px; text-align:center;} 
+@media only screen and (max-width: 2160px) {h1 { font-size: 144px;}}
+@media only screen and (max-width: 1920px) {h1 { font-size: 128px;}}
+@media only screen and (max-width: 1680px) {h1 { font-size: 112px;}}
+@media only screen and (max-width: 1440px) {h1 { font-size: 96px;}}
+@media only screen and (max-width: 1200px) {h1 { font-size: 80px;}}
+@media only screen and (max-width: 960px) {h1 { font-size: 64px;}}
+@media only screen and (max-width: 720px) {h1 { font-size: 48px;}}
+@media only screen and (max-width: 480px) {h1 { font-size: 32px;}}
+@media only screen and (max-width: 240px) {h1 { font-size: 16px;}}
+
+@font-face {
+	font-family: Solis;
+	src: url(../fonts/Solis-Regular.woff2) format('woff');
+  }
+  
+
+body {
+	font-size: 32px;
+    font-family: Solis,Arial,Helvetica,sans-serif;
+	padding: 0;
+	margin: 0;  
+	line-height: 1.5em;
+}
+
+.alert {
+	background-color: #e8b826;
+	color: white;
+	text-align: center;
+	position: fixed;
+	font-size: 16px;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	opacity: 0.9;
+	transition: height 1s;
+	display: none;
+	line-height: 1em;
+}
+
+.alert-inner {
+	margin: 20px;
+}
+
+
+.main-container,
+.output-container {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #e4eaf2;
+	font-size: 14px;    
+}
+
+.output-container {
+    padding-top: 0px;
+}
+
+.output-title-container {
+    text-align: left;
+    padding: 40px 40px 0px;
+	line-height: 1.2em;
+}
+
+.output-title-container div {
+	color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+	padding: 5px 0px;
+}
+
+.output-title-container .date-range {
+    text-transform: uppercase;
+}
+
+.main-container input,
+.main-container select {
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.forecast-day-item {
+    padding: 20px;
+    background: #fff;
+    color: #000;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.forecast-day-row {
+	display: flex;
+    margin: 10px 0px;
+	width: 100%;
+}
+
+.forecast-day-row > div {
+    flex-grow: 1;
+    line-height: 1.43;
+    display: flex;
+    align-items: center;
+	margin: 0px 20px;
+    width: 50%;
+}
+
+.forecast-day-date {
+    margin-right: 20px;
+    align-self: center;
+    text-transform: uppercase;
+	display: flex;
+    flex-direction: column;
+}
+
+.forecast-day-date .dow {
+    font-weight: 900;
+}
+
+.forecast-day-date .sub {
+    font-weight: 700;
+	color: #878787;
+}
+
+.forecast-day-icon img {
+    height: 62px;
+    margin-right: 12px;
+    width: 62px;
+}
+
+.forecast-day-temp .high {
+    font-size: 50.6px;
+    letter-spacing: -.42px;
+    line-height: 1.07;
+	font-weight: 900;
+}
+
+.forecast-day-temp .low {    
+	font-size: 20.3px;
+    line-height: .92;
+	color: #878787;
+}
+
+.forecast-day-realfeel,
+.forecast-day-uvindex {
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    display: flex;
+    padding: 11px 0 10px;
+}
+
+.forecast-day-summary {
+    font-size: 18px;
+}
+
+.forecast-day-row .value {	
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.33;
+    margin-left: auto;
+    padding-left: 8px;
+    text-align: right;
+}
+
+.forecast-day-precipitation {
+	text-align: right;
+    justify-content: flex-end;
+}
+
+.precip-icon {
+    height: 14px;
+    margin-right: 6px;
+}
+
+.forecast-day-row .forecast-day-precipitation .value {
+    margin-left: 0;
+	color: #878787;
+}
+
+.clone {
+	display: none;
+}
+@media only screen and (max-width: 720px) {
+	.forecast-day-row {
+		flex-flow: column;
+		margin: 0;
+	}
+
+	.forecast-day-row > div {
+		width: 100%;
+		margin: 0;
+	}
+
+	.forecast-day-realfeel,
+	.forecast-day-uvindex,
+	.forecast-day-realfeel-shade,
+	.forecast-day-wind {
+		align-items: center;
+		border-bottom: 1px solid rgba(0,0,0,.15);
+		display: flex;
+		padding: 11px 0 10px;
+	}
+
+	.forecast-day-precipitation {
+		text-align: left;
+		padding: 10px 0px;
+		justify-content: flex-start;
+	}
+
+	.main-container, 
+	.output-container {
+		padding: 20px
+	}
+
+	.forecast-day-summary {
+		margin: 20px 0px;
+	}
+}
